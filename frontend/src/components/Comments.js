@@ -45,7 +45,7 @@ const Comments = ({ parentId, internal = false }) => {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
+          'Access-Control-Allow-Origin': 'true'
         },
       })
         .then((response) => response.json())
@@ -79,6 +79,7 @@ const Comments = ({ parentId, internal = false }) => {
 
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          'Access-Control-Allow-Origin': 'true'
         },
       })
         .then((response) => {
