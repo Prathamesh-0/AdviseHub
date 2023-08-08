@@ -1,7 +1,6 @@
 const Advice = require("../models/Advice");
 const User = require("../models/User");
 const Comment = require("../models/Comment");
-const { useResolvedPath } = require("react-router-dom");
 const { deleteCommentAndChildren } = require("../utils/helperFunctions");
 const Tag = require("../models/Tag");
 
