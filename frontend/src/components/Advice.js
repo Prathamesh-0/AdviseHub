@@ -57,6 +57,7 @@ const Advice = ({ advice }) => {
       // Adding headers to the request
       headers: {
         "Content-type": "application/json; charset=UTF-8",
+        'Access-Control-Allow-Origin': 'true'
       },
     })
       // Converting to JSON
@@ -104,6 +105,7 @@ const Advice = ({ advice }) => {
       // Adding headers to the request
       headers: {
         "Content-type": "application/json; charset=UTF-8",
+        'Access-Control-Allow-Origin': 'true'
       },
     })
       // Converting to JSON
