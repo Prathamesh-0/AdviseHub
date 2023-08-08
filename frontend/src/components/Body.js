@@ -144,7 +144,12 @@ const Body = () => {
         choice
           ? `http://localhost:4000/api/v1/advice/byTags/top?${queryParams}`
           : `http://localhost:4000/api/v1/advice/byTags/latest?${queryParams}`
-      );
+      , {
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        'Access-Control-Allow-Origin': 'true'
+      },
+    });
 
       const data = await response.json();
       // console.log("fetched these tagged advices, : ", data);
@@ -155,7 +160,12 @@ const Body = () => {
       choice
         ? `http://localhost:4000/api/v1/advice/top/${currentPage}`
         : `http://localhost:4000/api/v1/advice/latest/${currentPage}`
-    );
+    , {
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        'Access-Control-Allow-Origin': 'true'
+      },
+    });
 
     const data = await response.json();
     // console.log("fetched these un-tagged advices, : ", data);
