@@ -838,7 +838,7 @@ exports.getTags = async (req, res) => {
   try {
     const tags = await Tag.find().select("_id tagName").sort({ tagName: 1 });
 
-    if (!tags || tags.length == 0) {
+    if (tags === null) {
       return res.status(404).json({
         success: false,
         message: "No tags found",
