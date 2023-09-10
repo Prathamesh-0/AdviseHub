@@ -15,7 +15,7 @@ const Login = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setSubmitted(false);
+    setSubmitted(true);
 
     fetch("http://localhost:4000/api/v1/login", {
       method: "POST",
